@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Список товаров{% endblock %}
+
+
+{% block content %}
+<h2>Список товаров</h2>
+
+<!-- Навигация для фильтрации -->
+<nav>
+    <a href="?">Все</a>
+    <a href="?category=телефоны">Телефоны</a>
+    <a href="?category=планшеты">Планшеты</a>
+    <a href="?category=аксессуары">Аксессуары</a>
+    <a href="?category=ноутбуки">Ноутбуки</a>
+</nav>
+
+<!-- Вывод списка товаров -->
+{% if products %}
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - {{ product.price }} ₽</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Товары отсутствуют</p>
+{% endif %}
+
+{% endblock %}

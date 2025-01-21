@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'catalog/style.css' %}">
     <title>{% block title %}Мой интернет-магазин{% endblock %}</title>
 </head>
 <body>
     <header>
+        <img src="{% static 'catalog/images/logo.png' %}" alt="Логотип магазина" width="125">
         <h1>Добро пожаловать в мой интернет-магазин</h1>
     </header>
     <main>

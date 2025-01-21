@@ -20,5 +20,6 @@ from Catalog.views import *
 
 urlpatterns = [
        path('admin/', admin.site.urls),
-       path('', index),
+       path('', product_list, name='product_list'),
+       path('add/', add_product, name='add_product'),
 ]
